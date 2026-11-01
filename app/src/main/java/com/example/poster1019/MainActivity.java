@@ -2,8 +2,6 @@ package com.example.poster1019;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -18,16 +16,12 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         int count = posterRepository.getFavoriteCount();
         BadgeDrawable badge = bottomNavigation.getOrCreateBadge(R.id.nav_favorites);
         badge.setBackgroundColor(ContextCompat.getColor(this, R.color.colorBadge));
-        badge.setBadgeTextColor(ContextCompat.getColor(this, R.color.colorTextIcons));
+        badge.setBadgeTextColor(ContextCompat.getColor(this, R.color.posterInfoCards));
         badge.setNumber(count);
         badge.setVisible(count > 0);
     }

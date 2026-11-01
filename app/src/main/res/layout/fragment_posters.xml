@@ -27,7 +27,7 @@
         android:insetBottom="0dp"
         android:text="@string/add_to_watchlist"
         android:textAllCaps="false"
-        android:textColor="@color/colorTextIcons"
+        android:textColor="@color/posterInfoCards"
         android:textSize="15sp"
         android:visibility="gone"
         app:backgroundTint="@color/colorAccent"

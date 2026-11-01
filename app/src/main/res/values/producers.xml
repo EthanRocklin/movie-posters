@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="producers">
+        <item>Kane Parsons</item>
+        <item>Christopher Meledandri</item>
+        <item>Peter Jackson</item>
+        <item>Richard Donner</item>
+        <item>Louis D\'Esposito &amp; Kevin Feige</item>
+        <item>Mary Parent, Cale Boyter, Joe Caracciolo</item>
+        <item>Baz Luhrmann</item>
+        <item>David Heyman</item>
+        <item>James Gunn</item>
+        <item>Peter Safran</item>
+        <item>Kathleen Kennedy</item>
+        <item>Jim Morris</item>
+    </string-array>
+</resources>

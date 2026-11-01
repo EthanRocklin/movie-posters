@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="titles">
+        <item>Backrooms</item>
+        <item>Super Mario Galaxy</item>
+        <item>The Hobbit: An Unexpected Journey</item>
+        <item>The Goonies</item>
+        <item>Avengers: Doomsday</item>
+        <item>Dune</item>
+        <item>The Great Gatsby</item>
+        <item>Harry Potter and the Deathly Hallows: Part 1</item>
+        <item>Avengers: Infinity War</item>
+        <item>Superman</item>
+        <item>Star Wars: The Last Jedi</item>
+        <item>Wall-E</item>
+    </string-array>
+</resources>

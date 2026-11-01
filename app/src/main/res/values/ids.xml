@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ids">
+        <item>00000001</item>
+        <item>00000002</item>
+        <item>00000003</item>
+        <item>00000004</item>
+        <item>00000005</item>
+        <item>00000006</item>
+        <item>00000007</item>
+        <item>00000008</item>
+        <item>00000009</item>
+        <item>00000010</item>
+        <item>00000011</item>
+        <item>00000012</item>
+    </string-array>
+</resources>

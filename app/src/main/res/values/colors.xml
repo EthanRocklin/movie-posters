@@ -3,15 +3,15 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">#41D3BD</color>
+    <color name="colorPrimary">#3C2245</color>
     <color name="colorPrimaryDark">#41D3BD</color>
-    <color name="colorAccent">#FDA14F</color>
-    <color name="colorTextIcons">#FFFFFFFF</color>
-    <color name="colorTextPrimary">#212121</color>
-    <color name="colorTextSecondary">#757575</color>
-    <color name="colorRatingActive">#FDA14F</color>
+    <color name="colorAccent">#29CC5E</color>
+    <color name="posterInfoCards">#27222C</color>
+    <color name="colorTextPrimary">#82FF62</color>
+    <color name="colorTextSecondary">#FF9E46</color>
+    <color name="colorRatingActive">#CC3EFF</color>
     <color name="colorRatingInactive">#C9C9D1</color>
-    <color name="colorBackground">#EEEEEE</color>
+    <color name="colorBackground">#150F1B</color>
 
     <color name="colorAccentLight">#FFE3C7</color>
     <color name="colorAccentSoft">#FFF1E3</color>

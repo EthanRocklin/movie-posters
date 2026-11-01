@@ -1,6 +1,5 @@
 package com.example.poster1019;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PostersFragment extends Fragment implements posterListener {
@@ -33,7 +31,7 @@ public class PostersFragment extends Fragment implements posterListener {
 
         //the posters come from the shared repository
         posterRepository = PosterRepository.getInstance(requireContext());
-        List<Posters> posters = posterRepository.getAllPosters();
+        List<Poster> posters = posterRepository.getAllPosters();
 
         //connect the list to its adapter
         final PostersAdapter postersAdapter = new PostersAdapter(posters, this);
@@ -47,7 +45,7 @@ public class PostersFragment extends Fragment implements posterListener {
         buttonAddtoWatchList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                List<Posters> selectPosters = postersAdapter.getSelectedPosters();
+                List<Poster> selectPosters = postersAdapter.getSelectedPosters();
 
                 int added = posterRepository.addFavorites(selectPosters);
 

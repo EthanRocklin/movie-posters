@@ -1,10 +1,10 @@
 package com.example.poster1019;
 
-public class Posters {
+public class Poster {
 
     String id;
 
-    String name,createdBy,story;
+    String title, producer, description;
     int image;
     Boolean isSelected = false;
     float rating;

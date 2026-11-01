@@ -1,6 +1,7 @@
 package com.example.poster1019;
 
 import android.content.Context;
+import android.content.res.Resources;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,7 +19,7 @@ public class PosterRepository {
 
     private static PosterRepository instance;
 
-    private final List<Posters> allPosters;
+    private final List<Poster> allPosters;
     private final FavoritesStore favoritesStore;
     private final List<FavoritesListener> favoritesListeners = new ArrayList<>();
 
@@ -32,23 +33,23 @@ public class PosterRepository {
     }
 
     private PosterRepository(Context appContext) {
-        allPosters = Collections.unmodifiableList(createPosters());
+        allPosters = Collections.unmodifiableList(createPosters(appContext));
         favoritesStore = new FavoritesStore(appContext);
 
         // Forget saved favorites whose poster no longer exists in the app.
         List<String> validIds = new ArrayList<>();
-        for (Posters poster : allPosters) {
+        for (Poster poster : allPosters) {
             validIds.add(poster.id);
         }
         favoritesStore.retainOnly(validIds);
     }
 
-    public List<Posters> getAllPosters(){
+    public List<Poster> getAllPosters(){
         return allPosters;
     }
 
-    public Posters findById(String id){
-        for(Posters posters:allPosters){
+    public Poster findById(String id){
+        for(Poster posters:allPosters){
             if(posters.id.equals(id)){
                 return posters;
             }
@@ -58,16 +59,16 @@ public class PosterRepository {
 
     // deselects every poster
     public void clearSelection(){
-        for(Posters poster : allPosters){
+        for(Poster poster : allPosters){
             poster.isSelected = false;
         }
     }
 
     //get favorite posters, in the order they were added
-    public List<Posters> getFavorites(){
-        List<Posters> favorites = new ArrayList<>();
+    public List<Poster> getFavorites(){
+        List<Poster> favorites = new ArrayList<>();
         for (String id : favoritesStore.getIds()) {
-            Posters poster = findById(id);
+            Poster poster = findById(id);
             if (poster != null) {
                 favorites.add(poster);
             }
@@ -81,9 +82,9 @@ public class PosterRepository {
 
     // Adds posters to favorites, skipping ones already there.
     // Returns how many were new, so the page can show the right message.
-    public int addFavorites(List<Posters> posters) {
+    public int addFavorites(List<Poster> posters) {
         List<String> ids = new ArrayList<>();
-        for (Posters poster : posters) {
+        for (Poster poster : posters) {
             ids.add(poster.id);
         }
         int added = favoritesStore.addAll(ids);
@@ -120,48 +121,46 @@ public class PosterRepository {
         }
     }
 
-    private static List<Posters> createPosters() {
-        List<Posters> posters = new ArrayList<>();
-
-        Posters the100 = new Posters();
-        the100.id = "vietnam";
-        the100.image = R.drawable.poster3;
-        the100.name = "Vietnam Movie";
-        the100.rating = 5f;
-        the100.createdBy = "Cuong Ngo";
-        the100.story = "This is an Vietnam Movie with a young lady";
-        posters.add(the100);
-
-        Posters chineseMovie = new Posters();
-        chineseMovie.id = "chinese";
-        chineseMovie.image = R.drawable.poster4;
-        chineseMovie.name = "Chinese Movie";
-        chineseMovie.rating = 4f;
-        chineseMovie.createdBy = "Zhang San";
-        chineseMovie.story = "This is an Chinese Movie with a young lady.";
-        posters.add(chineseMovie);
-
-        Posters japanMovie = new Posters();
-        japanMovie.id = "japanese";
-        japanMovie.image = R.drawable.poster1;
-        japanMovie.name = "Japanese Movie";
-        japanMovie.rating = 3f;
-        japanMovie.createdBy = "Juzo Itami";
-        japanMovie.story = "This is an Japanese Movie.";
-        posters.add(japanMovie);
-
-        Posters americanMovie = new Posters();
-        americanMovie.id = "american";
-        americanMovie.image = R.drawable.poster2;
-        americanMovie.name = "American Movie";
-        americanMovie.rating = 5f;
-        americanMovie.createdBy = "Tim Burton";
-        americanMovie.story = "This is an American Movie.";
-        posters.add(americanMovie);
-
+    /**
+     *
+     * @param context
+     * @return
+     */
+    private static List<Poster> createPosters(Context context) {
+        List<Poster> posters = new ArrayList<>();
+        Resources res = context.getResources();
+        // Gets all the information for the poster's and stores info types as arrays
+        String[] ids = res.getStringArray(R.array.ids);
+        int[] images = {
+                R.drawable.backrooms_poster,
+                R.drawable.super_mario_galaxy_poster,
+                R.drawable.hobbit_poster,
+                R.drawable.goonies_poster,
+                R.drawable.avengers_doomsday_poster,
+                R.drawable.dune_poster,
+                R.drawable.gatsby_poster,
+                R.drawable.hp_deathly_hallows_poster,
+                R.drawable.infinity_war_poster,
+                R.drawable.superman_poster,
+                R.drawable.sw_last_jedi_poster,
+                R.drawable.wall_e_poster
+        };
+        String[] titles = res.getStringArray(R.array.titles);
+        String[] ratings = res.getStringArray(R.array.ratings);
+        String[] producers = res.getStringArray(R.array.producers);
+        String[] descriptions = res.getStringArray(R.array.descriptions);
+        // Creates all the posters with the appropriate movie details and adds to the list
+        for (int i = 0; i < ids.length; i++) {
+            Poster poster = new Poster();
+            poster.id = ids[i];
+            poster.image = images[i];
+            poster.title = titles[i];
+            poster.rating = Float.parseFloat(ratings[i]);
+            poster.producer = producers[i];
+            poster.description = descriptions[i];
+            posters.add(poster);
+        }
         return posters;
-
     }
-
 
 }

@@ -1,6 +1,5 @@
 package com.example.poster1019;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -53,7 +52,7 @@ public class FavoritesFragment extends Fragment implements PosterRepository.Favo
     }
 
     private void refresh() {
-        List<Posters> favorites = posterRepository.getFavorites();
+        List<Poster> favorites = posterRepository.getFavorites();
         favoritesAdapter.setPosters(favorites);
 
         int count = favorites.size();
@@ -72,7 +71,7 @@ public class FavoritesFragment extends Fragment implements PosterRepository.Favo
     }
 
     @Override
-    public void onRemoveFavorite(Posters poster) {
+    public void onRemoveFavorite(Poster poster) {
         posterRepository.removeFavorite(poster.id);
     }
 }
