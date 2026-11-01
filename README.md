@@ -1,2 +1,2 @@
 # movie-posters
-A movie poster application that was built for CS 460, Software Engineering for Mobile Devices, at Central Washington University. It was developed in Android Studio Panda 4 (API level 26) using Java and XML. 
+A movie poster application that was built for CS 460, Software Engineering for Mobile Devices, at Central Washington University. It was developed in Android Studio Panda 4 (API level 26) using Java and XML. The original code was provided by Dr. Shangyue Zhu and was meant to be modified to meet specific requirements. The first commit to this repository included the original files; all other commits include modifications and additions.
