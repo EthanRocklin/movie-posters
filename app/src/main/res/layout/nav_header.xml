@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
+    android:background="@color/primaryBackground"
     android:paddingStart="16dp"
     android:paddingTop="24dp"
     android:paddingEnd="16dp"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/app_name"
-        android:textColor="@color/posterInfoCards"
+        android:textColor="@color/headerText"
         android:textSize="15sp"
         android:textStyle="bold"/>
 
@@ -28,10 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_version"
-        android:textColor="@color/posterInfoCards"
+        android:textColor="@color/versionText"
         android:textSize="12sp"/>
-
-
-
 
 </LinearLayout>

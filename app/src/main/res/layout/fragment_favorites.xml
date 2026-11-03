@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".FavoritesFragment">
 
@@ -16,7 +16,7 @@
         android:paddingStart="15dp"
         android:paddingTop="12dp"
         android:paddingEnd="15dp"
-        android:textColor="@color/colorTextSecondary"
+        android:textColor="@color/textSecondary"
         android:textSize="13sp"
         tools:text="2 movies"/>
 
@@ -50,7 +50,7 @@
                 android:layout_height="56dp"
                 android:importantForAccessibility="no"
                 android:src="@drawable/ic_favorite"
-                app:tint="@color/colorRatingInactive"/>
+                app:tint="@color/ratingInactive"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
                 android:gravity="center"
                 android:lineSpacingExtra="3dp"
                 android:text="@string/favorites_empty"
-                android:textColor="@color/colorTextSecondary"
+                android:textColor="@color/textSecondary"
                 android:textSize="15sp"/>
 
         </LinearLayout>

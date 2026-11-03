@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
         int count = posterRepository.getFavoriteCount();
         BadgeDrawable badge = bottomNavigation.getOrCreateBadge(R.id.nav_favorites);
-        badge.setBackgroundColor(ContextCompat.getColor(this, R.color.colorBadge));
-        badge.setBadgeTextColor(ContextCompat.getColor(this, R.color.posterInfoCards));
+        badge.setBackgroundColor(ContextCompat.getColor(this, R.color.primaryBackground));
+        badge.setBadgeTextColor(ContextCompat.getColor(this, R.color.primaryBackground));
         badge.setNumber(count);
         badge.setVisible(count > 0);
     }

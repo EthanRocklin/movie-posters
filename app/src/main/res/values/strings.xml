@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Movie Favs</string>
     <string name="add_to_watchlist">Add To Watchlist</string>
-    <string name="posters">Posters</string>
+    <string name="posters">Movie Posters</string>
 
-    <string name="nav_main">Main Page</string>
-    <string name="nav_favorites">Favorite List</string>
+    <string name="nav_main">Home</string>
+    <string name="nav_favorites">Favorites</string>
     <string name="nav_contact">Contact Us</string>
     <string name="title_favorites">Favorite List</string>
     <string name="title_contact">Contact Us</string>
@@ -13,10 +13,10 @@
     <string name="navigation_drawer_close">Close menu</string>
 
     <string name="about_us">About Us</string>
-    <string name="company_intro">MoviePoster is a small studio that builds simple, friendly apps for discovering films from around the world. We hand-pick posters and stories so you can quickly find, and save, your next favorite movie.</string>
-    <string name="get_in_touch">Get in touch</string>
+    <string name="company_intro">MoviePoster is a small studio that builds simple, friendly apps for discovering all kinds of films!\n\nWe hand-pick posters and stories so you can explore your next favorite movies!</string>
+    <string name="get_in_touch">Questions or Concerns?\nGet In Touch!</string>
     <string name="contact_email">contact@movieposter.com</string>
-    <string name="contact_email_hint">Tap to open your email app</string>
+    <string name="contact_email_hint">Tap to open your email app!</string>
     <string name="no_email_app">No email app found</string>
 
 

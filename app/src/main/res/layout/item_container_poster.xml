@@ -39,7 +39,7 @@
         android:layout_marginTop="35dp"
         android:layout_marginEnd="10dp"
         android:paddingTop="15dp"
-        android:textColor="@color/colorTextPrimary"
+        android:textColor="@color/headerText"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,13 +59,15 @@
         app:layout_constraintTop_toBottomOf="@id/textName"/>
 
     <TextView
-        android:id="@+id/textCreateBy"
+        android:id="@+id/textProducer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textColor="@color/colorTextSecondary"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/producerText"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/textName"
         app:layout_constraintStart_toStartOf="@id/textName"
         app:layout_constraintTop_toBottomOf="@id/ratingBar"/>
@@ -77,17 +79,19 @@
         android:layout_marginTop="2dp"
         android:ellipsize="end"
         android:maxLines="2"
-        android:textColor="@color/colorTextSecondary"
+        android:textColor="@color/movieDescriptionText"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="@id/textName"
         app:layout_constraintStart_toStartOf="@id/textName"
-        app:layout_constraintTop_toBottomOf="@id/textCreateBy"/>
+        app:layout_constraintTop_toBottomOf="@id/textProducer"/>
 
     <ImageView
         android:id="@+id/imageSelected"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="1dp"
+        android:translationX="-5dp"
+        android:translationY="20dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/checkmark"
         android:visibility="gone"
@@ -108,8 +112,6 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/textName"
-        app:tint="@color/colorAccent"/>
-
-
+        app:tint="@color/accent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

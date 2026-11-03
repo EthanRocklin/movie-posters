@@ -97,7 +97,7 @@ public class PostersAdapter extends RecyclerView.Adapter<PostersAdapter.PostersV
             viewbackground = itemView.findViewById(R.id.viewBackground);
             imagePosters = itemView.findViewById(R.id.imagePosters);
             textName = itemView.findViewById(R.id.textName);
-            textCreatedBy = itemView.findViewById(R.id.textCreateBy);
+            textCreatedBy = itemView.findViewById(R.id.textProducer);
             textStory = itemView.findViewById(R.id.textStory);
             ratingBar = itemView.findViewById(R.id.ratingBar);
             imageSelected = itemView.findViewById(R.id.imageSelected);
