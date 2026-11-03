@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     //Tags to find each page's Fragment again in the FragmentManager.
     private static final String TAG_PAGE_MAIN = "page_main";
     private static final String TAG_PAGE_FAVORITES = "page_favorites";
+    private static final String TAG_PAGE_RANDOM = "page_random";
     private static final String TAG_PAGE_CONTACT = "page_contact";
 
     //drawer the side menu inside it, and the bottom bar.
@@ -109,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.fragmentContainer, new PostersFragment(), TAG_PAGE_MAIN)
                     .add(R.id.fragmentContainer, new FavoritesFragment(), TAG_PAGE_FAVORITES)
+                    .add(R.id.fragmentContainer, new RandomStillsFragment(), TAG_PAGE_RANDOM)
                     .add(R.id.fragmentContainer, new ContactFragment(), TAG_PAGE_CONTACT)
                     .commitNow();
         } else {
@@ -143,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         String visibleTag = tagForPage(pageId);
-        for (String tag : new String[]{TAG_PAGE_MAIN, TAG_PAGE_FAVORITES, TAG_PAGE_CONTACT}) {
+        for (String tag : new String[]{TAG_PAGE_MAIN, TAG_PAGE_FAVORITES, TAG_PAGE_RANDOM, TAG_PAGE_CONTACT}) {
             Fragment page = fragmentManager.findFragmentByTag(tag);
             if (page == null) {
                 continue;
@@ -171,7 +173,10 @@ public class MainActivity extends AppCompatActivity {
     private int titleForPage(int pageId) {
         if (pageId == R.id.nav_favorites) {
             return R.string.title_favorites;
-        } else if (pageId == R.id.nav_contact) {
+        } else if (pageId == R.id.nav_random) {
+            return R.string.title_random;
+        }
+        else if (pageId == R.id.nav_contact) {
             return R.string.title_contact;
         }
         return R.string.posters;
@@ -181,11 +186,13 @@ public class MainActivity extends AppCompatActivity {
     private String tagForPage(int pageId) {
         if (pageId == R.id.nav_favorites) {
             return TAG_PAGE_FAVORITES;
-        } else if (pageId == R.id.nav_contact) {
+        } else if (pageId == R.id.nav_random) {
+            return TAG_PAGE_RANDOM;
+        }
+        else if (pageId == R.id.nav_contact) {
             return TAG_PAGE_CONTACT;
         }
         return TAG_PAGE_MAIN;
     }
-
 
 }

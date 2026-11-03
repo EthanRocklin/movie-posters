@@ -5,7 +5,7 @@
 
     <string name="nav_main">Home</string>
     <string name="nav_favorites">Favorites</string>
-    <string name="nav_random">Random Still</string>
+    <string name="nav_random">Random</string>
     <string name="nav_contact">Contact Us</string>
     <string name="title_favorites">Favorites</string>
     <string name="title_contact">Contact Us</string>
@@ -32,5 +32,7 @@
     </plurals>
     <string name="favorites_empty">No favorites yet.\nGo to Home and add your favs!</string>
     <string name="remove_favorite">Remove from favorites</string>
+    <string name="randomize_button">Randomize</string>
+    <string name="title_random">Random Stills</string>
 
 </resources>

@@ -22,13 +22,15 @@
         android:text="@string/app_name"
         android:textColor="@color/headerText"
         android:textSize="15sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:fontFamily="@font/tektur_regular"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_version"
         android:textColor="@color/versionText"
-        android:textSize="12sp"/>
+        android:textSize="12sp"
+        android:fontFamily="@font/tektur_regular"/>
 
 </LinearLayout>

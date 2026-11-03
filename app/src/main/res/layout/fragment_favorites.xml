@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context=".FavoritesFragment">
 
-
     <TextView
         android:id="@+id/textFavoritesCount"
         android:layout_width="match_parent"
@@ -18,12 +17,14 @@
         android:paddingEnd="15dp"
         android:textColor="@color/textSecondary"
         android:textSize="13sp"
+        android:fontFamily="@font/tektur_regular"
         tools:text="2 movies"/>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/favoritesRecyclerView"
             android:layout_width="match_parent"
@@ -60,8 +61,11 @@
                 android:lineSpacingExtra="16dp"
                 android:text="@string/favorites_empty"
                 android:textColor="@color/textSecondary"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:fontFamily="@font/tektur_regular"/>
 
         </LinearLayout>
+
     </FrameLayout>
+
 </LinearLayout>

@@ -28,7 +28,7 @@
             android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
             app:title="@string/posters"
             app:titleCentered="true"
-            app:titleTextAppearance="@style/ToolbarTitle" />
+            app:titleTextAppearance="@style/ToolbarTitle"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -58,6 +58,8 @@
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu_navigation"
+        app:itemTextAppearanceActive="@style/TextAppearance.App.NavItem"
+        app:itemTextAppearanceInactive="@style/TextAppearance.App.NavItem"
         tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -74,6 +76,7 @@
         app:itemIconTint="@color/nav_item_tint"
         app:itemShapeFillColor="@color/drawer_item_fill"
         app:itemTextColor="@color/nav_item_tint"
-        app:menu="@menu/menu_navigation"/>
+        app:menu="@menu/menu_navigation"
+        app:itemTextAppearance="@style/TextAppearance.App.NavItem"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

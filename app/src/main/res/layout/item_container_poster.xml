@@ -42,6 +42,7 @@
         android:textColor="@color/headerText"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:fontFamily="@font/tektur_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@id/imageRemove"
         app:layout_constraintStart_toEndOf="@id/imagePosters"
@@ -68,6 +69,7 @@
         android:textColor="@color/producerText"
         android:textSize="15sp"
         android:textStyle="bold"
+        android:fontFamily="@font/tektur_regular"
         app:layout_constraintEnd_toEndOf="@id/textName"
         app:layout_constraintStart_toStartOf="@id/textName"
         app:layout_constraintTop_toBottomOf="@id/ratingBar"/>
@@ -81,6 +83,7 @@
         android:maxLines="2"
         android:textColor="@color/movieDescriptionText"
         android:textSize="13sp"
+        android:fontFamily="@font/tektur_regular"
         app:layout_constraintEnd_toEndOf="@id/textName"
         app:layout_constraintStart_toStartOf="@id/textName"
         app:layout_constraintTop_toBottomOf="@id/textProducer"/>
