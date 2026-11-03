@@ -2,10 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Poster1019" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/accent</item>
-        <item name="colorOnPrimary">@color/primaryBackground</item>
+        <item name="colorOnPrimary">@color/headerBackground</item>
         <item name="colorSecondary">@color/accent</item>
-        <item name="colorOnSecondary">@color/primaryBackground</item>
+        <item name="colorOnSecondary">@color/headerBackground</item>
     </style>
-
     <style name="Theme.Poster1019" parent="Base.Theme.Poster1019" />
 </resources>

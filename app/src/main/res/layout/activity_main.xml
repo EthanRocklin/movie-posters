@@ -17,14 +17,14 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/primaryBackground"
+        android:background="@color/headerBackground"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/primaryBackground"
+            android:background="@color/headerBackground"
             android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
             app:title="@string/posters"
             app:titleCentered="true"
@@ -60,7 +60,6 @@
         app:menu="@menu/menu_navigation"
         tools:layout_editor_absoluteX="0dp" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -68,10 +67,10 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/white"
+        android:background="@color/background"
         app:bottomInsetScrimEnabled="false"
         app:headerLayout="@layout/nav_header"
-        app:insetForeground="@color/primaryBackground"
+        app:insetForeground="@color/headerBackground"
         app:itemIconTint="@color/nav_item_tint"
         app:itemShapeFillColor="@color/drawer_item_fill"
         app:itemTextColor="@color/nav_item_tint"

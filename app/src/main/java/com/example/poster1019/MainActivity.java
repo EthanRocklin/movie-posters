@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
         int count = posterRepository.getFavoriteCount();
         BadgeDrawable badge = bottomNavigation.getOrCreateBadge(R.id.nav_favorites);
-        badge.setBackgroundColor(ContextCompat.getColor(this, R.color.primaryBackground));
-        badge.setBadgeTextColor(ContextCompat.getColor(this, R.color.primaryBackground));
+        badge.setBackgroundColor(ContextCompat.getColor(this, R.color.headerBackground));
+        badge.setBadgeTextColor(ContextCompat.getColor(this, R.color.headerBackground));
         badge.setNumber(count);
         badge.setVisible(count > 0);
     }
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
     private void showPage(int pageId) {
         currentPageId = pageId;
 
-        //Show this page's Fragment and hide the other two. show/hide (instead of
+        // Show this page's Fragment and hide the other two. show/hide (instead of
         // replace) keeps each page alive, with its scroll position and selections.
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
