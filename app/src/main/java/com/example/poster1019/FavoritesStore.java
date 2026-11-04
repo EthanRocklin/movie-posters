@@ -11,7 +11,6 @@ import java.util.List;
 
 /**
  * Saves the favorite poster IDs on the device, so they survive closing the app.
- *
  */
 public class FavoritesStore {
     private static final String PREFS_NAME = "favorites";

@@ -44,15 +44,13 @@ public class MainActivity extends AppCompatActivity {
     private final PosterRepository.FavoritesListener favoritesBadgeListener = this::updateFavoritesBadge;
 
     private void updateFavoritesBadge() {
-
         int count = posterRepository.getFavoriteCount();
         BadgeDrawable badge = bottomNavigation.getOrCreateBadge(R.id.nav_favorites);
-        badge.setBackgroundColor(ContextCompat.getColor(this, R.color.headerBackground));
+        badge.setBackgroundColor(ContextCompat.getColor(this, R.color.favoritesBadge));
         badge.setBadgeTextColor(ContextCompat.getColor(this, R.color.headerBackground));
         badge.setNumber(count);
         badge.setVisible(count > 0);
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,21 +62,17 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        //find by id
+        // find by id
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigationView);
         bottomNavigation = findViewById(R.id.bottomNavigation);
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
-
         setSupportActionBar(toolbar);
-
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
-
         //The drawer and the bottom bar both just call showPage().
         // Returning true tells them to show the tapped item as selected.
         navigationView.setNavigationItemSelectedListener(item -> {
@@ -89,11 +83,9 @@ public class MainActivity extends AppCompatActivity {
             showPage(item.getItemId());
             return true;
         });
-
         //Window insets: the sizes of the status bar, navigation bar and camera cut-out.
         final AppBarLayout appBarLayout = findViewById(R.id.appBarLayout);
         final View fragmentContainer = findViewById(R.id.fragmentContainer);
-
         final View drawerHeader = navigationView.getHeaderView(0);
         final int drawerHeaderPaddingTop = drawerHeader.getPaddingTop();
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -105,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
                     drawerHeader.getPaddingRight(), drawerHeader.getPaddingBottom());
             return insets;
         });
-
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.fragmentContainer, new PostersFragment(), TAG_PAGE_MAIN)
@@ -117,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
             currentPageId = savedInstanceState.getInt(KEY_CURRENT_PAGE, R.id.nav_main);
         }
         showPage(currentPageId);
-
         //Favorites badge: show the current count now, then follow every change.
         posterRepository = PosterRepository.getInstance(this);
         posterRepository.addFavoritesListener(favoritesBadgeListener);
@@ -137,9 +127,13 @@ public class MainActivity extends AppCompatActivity {
         outState.putInt(KEY_CURRENT_PAGE, currentPageId);
     }
 
+    /**
+     * This method shows the page that corresponds to the resource ID passed to it.
+     *
+     * @param pageId an integer ID to the page's XML layout
+     */
     private void showPage(int pageId) {
         currentPageId = pageId;
-
         // Show this page's Fragment and hide the other two. show/hide (instead of
         // replace) keeps each page alive, with its scroll position and selections.
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -157,19 +151,22 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         transaction.commit();
-
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(titleForPage(pageId));
         }
-
         navigationView.setCheckedItem(pageId);
         bottomNavigation.getMenu().findItem(pageId).setChecked(true);
-
         drawerLayout.closeDrawer(GravityCompat.START);
 
     }
 
-    //Toolbar title for each page.
+    /**
+     * This method gets the title of the page that corresponds to the passed ID.
+     *
+     * @param pageId an integer ID to the page's XML layout
+     * @return the integer corresponding to the resource containing the
+     *         title of the page
+     */
     private int titleForPage(int pageId) {
         if (pageId == R.id.nav_favorites) {
             return R.string.title_favorites;
@@ -182,7 +179,13 @@ public class MainActivity extends AppCompatActivity {
         return R.string.posters;
     }
 
-    //Which Fragment tag belongs to a page.
+    /**
+     * This method gets the string tag that belongs to the page corresponding
+     * to the passed ID.
+     *
+     * @param pageId an integer ID to the page's XML layout
+     * @return a String representing the page's tag
+     */
     private String tagForPage(int pageId) {
         if (pageId == R.id.nav_favorites) {
             return TAG_PAGE_FAVORITES;

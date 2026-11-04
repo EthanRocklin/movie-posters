@@ -1,25 +1,29 @@
 <resources>
-    <string name="app_name">Movie Favs</string>
-    <string name="add_to_watchlist">Add To Watchlist</string>
-    <string name="posters">Movie Posters</string>
-
-    <string name="nav_main">Home</string>
-    <string name="nav_favorites">Favorites</string>
-    <string name="nav_random">Random</string>
-    <string name="nav_contact">Contact Us</string>
-    <string name="title_favorites">Favorites</string>
-    <string name="title_contact">Contact Us</string>
-    <string name="app_version">Version 1.1.01</string>
-    <string name="navigation_drawer_open">Open menu</string>
-    <string name="navigation_drawer_close">Close menu</string>
-
     <string name="about_us">About Us</string>
-    <string name="company_intro">MoviePoster is a small studio that builds simple, friendly apps for discovering all kinds of films!\n\nWe hand-pick posters and stories so you can explore your next favorite movies!</string>
-    <string name="get_in_touch">Questions or Concerns?\nGet In Touch!</string>
+    <string name="add_to_watchlist">Add To Watchlist</string>
+    <string name="app_name">Movie Favs</string>
+    <string name="app_version">Version 1.1.01</string>
+    <string name="company_intro">Movie Favs is a small studio that builds simple, friendly apps for discovering all kinds of films!\n\nWe hand-pick posters and stories so you can explore your next favorite movies!</string>
     <string name="contact_email">contact@movieposter.com</string>
     <string name="contact_email_hint">Tap to open your email app!</string>
+    <string name="creator_intro">I am a senior computer science student at Central Washington University.\n\nMy current research includes leveraging swarm intelligence algorithms to find optimal solutions.</string>
+    <string name="creator_literal">Creator</string>
+    <string name="creator_name">Ethan Rocklin</string>
+    <string name="favorites_empty">No favorites yet.\nGo to Home and add your favs!</string>
+    <string name="get_in_touch">Questions or Concerns?\nGet In Touch!</string>
+    <string name="nav_contact">Contact Us</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_main">Home</string>
+    <string name="nav_random">Random</string>
+    <string name="navigation_drawer_close">Close menu</string>
+    <string name="navigation_drawer_open">Open menu</string>
     <string name="no_email_app">Oh no! No email app found!</string>
-
+    <string name="posters">Movie Posters</string>
+    <string name="randomize_button">Randomize</string>
+    <string name="remove_favorite">Remove from favorites</string>
+    <string name="title_contact">Contact Us</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_random">Random Stills</string>
 
     <plurals name="favorites_added">
         <item quantity="one">Added %d movie to Favorite List</item>
@@ -30,9 +34,4 @@
         <item quantity="one">%d movie</item>
         <item quantity="other">%d movies</item>
     </plurals>
-    <string name="favorites_empty">No favorites yet.\nGo to Home and add your favs!</string>
-    <string name="remove_favorite">Remove from favorites</string>
-    <string name="randomize_button">Randomize</string>
-    <string name="title_random">Random Stills</string>
-
 </resources>

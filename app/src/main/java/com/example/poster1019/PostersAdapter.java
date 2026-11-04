@@ -18,7 +18,7 @@ import java.util.List;
 
 public class PostersAdapter extends RecyclerView.Adapter<PostersAdapter.PostersViewHolder> {
 
-    //  The same adapter and card layout are used on two pages.
+    // The same adapter and card layout are used on two pages.
     // SELECT   = Main Page: tap a card to select it (orange border + checkmark).
     // FAVORITE = Favorite List: cards can't be selected; each has a remove button.
     public enum Mode { SELECT, FAVORITE }
@@ -104,25 +104,25 @@ public class PostersAdapter extends RecyclerView.Adapter<PostersAdapter.PostersV
             imageRemove = itemView.findViewById(R.id.imageRemove);
         }
 
-        void bindPosters(final Poster posters){
+        void bindPosters(final Poster posters) {
             imagePosters.setImageResource(posters.image);
             textName.setText(posters.title);
             textStory.setText(posters.description);
             textCreatedBy.setText(posters.producer);
             ratingBar.setRating(posters.rating);
 
-            if(mode == Mode.FAVORITE){
+            if (mode == Mode.FAVORITE){
                 bindFavorite(posters);
                 return;
             }
             imageRemove.setVisibility(View.GONE);
 
             // show whether the poster is selected
-            if(posters.isSelected){
+            if (posters.isSelected){
                 viewbackground.setBackgroundResource(R.drawable.poster_selected_background);
                 imageSelected.setVisibility(View.VISIBLE);
 
-            }else{
+            } else{
                 viewbackground.setBackgroundResource(R.drawable.poster_background);
                 imageSelected.setVisibility(View.GONE);
             }
@@ -130,13 +130,13 @@ public class PostersAdapter extends RecyclerView.Adapter<PostersAdapter.PostersV
             layoutPosters.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(posters.isSelected){
+                    if (posters.isSelected){
                         viewbackground.setBackgroundResource(R.drawable.poster_background);
                         imageSelected.setVisibility(View.GONE);
                         posters.isSelected =false;
                         if(getSelectedPosters().isEmpty()){
                         posterListener.OnPosterAction(false);}
-                    }else{
+                    } else{
                         viewbackground.setBackgroundResource(R.drawable.poster_selected_background);
                         imageSelected.setVisibility(View.VISIBLE);
                         posters.isSelected =true;

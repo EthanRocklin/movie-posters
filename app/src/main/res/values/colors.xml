@@ -9,6 +9,7 @@
     <color name="emailIcon">#E4ABFF</color>
     <color name="emailText">#9EFB8C</color>
     <color name="emailTapText">#818181</color>
+    <color name="favoritesBadge">#CC3EFF</color>
     <color name="favoritesInactive">#CC3EFF</color>
     <color name="headerBackground">#27222C</color>
     <color name="headerText">#E1E1E1</color>
@@ -19,6 +20,7 @@
     <color name="producerText">#9EFB8C</color>
     <color name="textPrimary">#9EFB8C</color>
     <color name="textSecondary">#9EFB8C</color>
+    <color name="toolbarText">#9EFB8C</color>
     <color name="versionText">#E4ABFF</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

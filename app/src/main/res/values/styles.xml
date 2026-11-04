@@ -8,6 +8,11 @@
     <style name="BottomNavActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/navFooterBackground</item>
     </style>
+    <style name="TextAppearance.App.SupportActionBar" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:fontFamily">@font/tektur_regular</item>
+        <item name="fontFamily">@font/tektur_regular</item>
+        <item name="android:textSize">20sp</item>
+    </style>
     <style name="TextAppearance.App.NavItem" parent="TextAppearance.AppCompat.Body2">
         <item name="android:fontFamily">@font/tektur_regular</item>
         <item name="fontFamily">@font/tektur_regular</item>
@@ -16,7 +21,9 @@
     <style name="ToolbarTitle" parent="TextAppearance.Material3.TitleMedium">
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/headerText</item>
+        <item name="android:fontFamily">@font/tektur_regular</item>
+        <item name="fontFamily">@font/tektur_regular</item>
+        <item name="android:textColor">@color/toolbarText</item>
     </style>
     <style name="RatingBar" parent="AppTheme">
         <item name="colorControlActivated">@color/favoritesInactive</item>

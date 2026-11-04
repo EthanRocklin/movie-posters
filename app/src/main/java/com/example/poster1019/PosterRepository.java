@@ -122,9 +122,14 @@ public class PosterRepository {
     }
 
     /**
+     * This method creates and populates a list of Poster objects for populating
+     * the Home page. The posters' contents are predefined, but in a commercial
+     * environment, this data would be retrieved by a database as to not consume
+     * significant local memory.
      *
-     * @param context
-     * @return
+     * @param context the application interface between the application and device's
+     *                operating system
+     * @return a List of Poster objects
      */
     private static List<Poster> createPosters(Context context) {
         List<Poster> posters = new ArrayList<>();

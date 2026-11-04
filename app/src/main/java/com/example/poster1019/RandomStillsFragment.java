@@ -14,6 +14,12 @@ import com.google.android.material.imageview.ShapeableImageView;
 
 import java.util.Random;
 
+/**
+ * This class handles the logic needed for the Random Stills page to function, such as
+ * processing and displaying a random still and a short description of what is happening
+ * in the scene.
+ */
+
 public class RandomStillsFragment extends Fragment {
 
     private Context context;

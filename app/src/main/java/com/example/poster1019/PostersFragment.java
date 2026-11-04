@@ -25,34 +25,27 @@ public class PostersFragment extends Fragment implements posterListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //find the list and the button
+        // find the list and the button
         RecyclerView posterRecyclerView = view.findViewById(R.id.posTersRecyclerView);
         buttonAddtoWatchList  = view.findViewById(R.id.buttonAddToWatchlist);
-
-        //the posters come from the shared repository
+        // the posters come from the shared repository
         posterRepository = PosterRepository.getInstance(requireContext());
         List<Poster> posters = posterRepository.getAllPosters();
-
-        //connect the list to its adapter
+        // connect the list to its adapter
         final PostersAdapter postersAdapter = new PostersAdapter(posters, this);
-//        final PostersAdapter postersAdapter = new PostersAdapter(posters, (posterListener) this);
+        // final PostersAdapter postersAdapter = new PostersAdapter(posters, (posterListener) this);
         posterRecyclerView.setAdapter(postersAdapter);
-
-        //selections live in the repository and survive rotation, so button show up again
+        // selections live in the repository and survive rotation, so button show up again
         OnPosterAction(!postersAdapter.getSelectedPosters().isEmpty());
-
-        //show the selected names
+        // show the selected names
         buttonAddtoWatchList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 List<Poster> selectPosters = postersAdapter.getSelectedPosters();
-
                 int added = posterRepository.addFavorites(selectPosters);
-
                 posterRepository.clearSelection();
                 postersAdapter.notifyDataSetChanged();
                 OnPosterAction(false);
-
                 String message;
                 if(added>0){
                     message = getResources().getQuantityString(R.plurals.favorites_added,added,added);

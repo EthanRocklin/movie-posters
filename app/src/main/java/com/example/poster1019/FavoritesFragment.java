@@ -26,23 +26,18 @@ public class FavoritesFragment extends Fragment implements PosterRepository.Favo
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        // Binds the XML IDs to fields
         textFavoritesCount = view.findViewById(R.id.textFavoritesCount);
         favoritesRecyclerView = view.findViewById(R.id.favoritesRecyclerView);
         layoutFavoritesEmpty = view.findViewById(R.id.layoutFavoritesEmpty);
-
         posterRepository = PosterRepository.getInstance(requireContext());
-
         // "this" handles the remove button (onRemoveFavorite below).
         favoritesAdapter = new PostersAdapter(posterRepository.getFavorites(), this);
         favoritesRecyclerView.setAdapter(favoritesAdapter);
-
         // Listen for changes. MainActivity only hides this page, so it stays up to date
         // even while another page is on screen.
         posterRepository.addFavoritesListener(this);
-
         refresh();
-
     }
 
     @Override
@@ -54,22 +49,31 @@ public class FavoritesFragment extends Fragment implements PosterRepository.Favo
     private void refresh() {
         List<Poster> favorites = posterRepository.getFavorites();
         favoritesAdapter.setPosters(favorites);
-
+        // Sets the text for the number of favorited movies
         int count = favorites.size();
         textFavoritesCount.setText(getResources().getQuantityString(R.plurals.favorites_count, count, count));
-
+        // Adjusts the visibility of favorite components
         boolean isEmpty = favorites.isEmpty();
         textFavoritesCount.setVisibility(isEmpty ? View.GONE : View.VISIBLE);
         favoritesRecyclerView.setVisibility(isEmpty ? View.GONE : View.VISIBLE);
         layoutFavoritesEmpty.setVisibility(isEmpty ? View.VISIBLE : View.GONE);
     }
 
+    /**
+     * This method updates the count and visibility of favorites when
+     * there is a change to them, such as adding or deleting favorites.
+     */
     @Override
     public void onFavoritesChanged() {
         refresh();
-
     }
 
+    /**
+     * This method removes a favorited poster from the PosterRepository
+     * when the user deleted it from the UI page.
+     *
+     * @param poster the Poster instance to remove
+     */
     @Override
     public void onRemoveFavorite(Poster poster) {
         posterRepository.removeFavorite(poster.id);
