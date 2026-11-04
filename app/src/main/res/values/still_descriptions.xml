@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="still_descriptions">
+        <item>Clark wanders the Backrooms, trying to understand its existence. As he goes deeper in to the liminal dimension, he wonders if there is an end to it.</item>
+        <item>Doom arrives and destroys New York City. His hatred takes hold, and the Avengers may not be strong enough to defeat this multiversal threat.</item>
+        <item>Travelers walk the sand dunes of Arrakis. Unbeknownst to them, their soft and faint footsteps are enough to wake the dunes\' horrific sandworms.</item>
+        <item>Nick takes a ride in Gatsby\'s Rolls-Royce down Long Island\'s sprawling streets. He tries to understand Gatsby\'s mysterious fame and fortune.</item>
+        <item>Thanos and Iron Man go head-to-head on Thanos\'s home world, Titan. Thanos has four of the six infinity stones, and he has his eyes set on the Time Stone.</item>
+    </string-array>
+</resources>

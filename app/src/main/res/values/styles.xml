@@ -5,9 +5,8 @@
         <item name="colorPrimaryDark">@color/headerBackground</item>
         <item name="colorAccent">@color/accent</item>
     </style>
-    <style name="RatingBar" parent="AppTheme">
-        <item name="colorControlActivated">@color/favoritesInactive</item>
-        <item name="colorControlNormal">@color/favoritesInactive</item>
+    <style name="BottomNavActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/navFooterBackground</item>
     </style>
     <style name="TextAppearance.App.NavItem" parent="TextAppearance.AppCompat.Body2">
         <item name="android:fontFamily">@font/tektur_regular</item>
@@ -19,7 +18,12 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/headerText</item>
     </style>
-    <style name="BottomNavActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
-        <item name="android:color">@color/navFooterBackground</item>
+    <style name="RatingBar" parent="AppTheme">
+        <item name="colorControlActivated">@color/favoritesInactive</item>
+        <item name="colorControlNormal">@color/favoritesInactive</item>
+    </style>
+    <style name="RoundedCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
     </style>
 </resources>
