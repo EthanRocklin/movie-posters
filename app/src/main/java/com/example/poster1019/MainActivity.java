@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private int titleForPage(int pageId) {
         if (pageId == R.id.nav_favorites) {
-            return R.string.title_favorites;
+            return R.string.title_watchlist;
         } else if (pageId == R.id.nav_random) {
             return R.string.title_random;
         }

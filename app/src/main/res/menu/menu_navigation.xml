@@ -6,7 +6,7 @@
             android:title="@string/nav_main"/>
         <item android:id="@+id/nav_favorites"
             android:icon="@drawable/ic_favorite"
-            android:title="@string/nav_favorites"/>
+            android:title="@string/nav_watchlist"/>
         <item android:id="@+id/nav_random"
             android:icon="@drawable/ic_random"
             android:title="@string/nav_random"/>

@@ -59,7 +59,7 @@
                 android:layout_marginTop="12dp"
                 android:gravity="center"
                 android:lineSpacingExtra="16dp"
-                android:text="@string/favorites_empty"
+                android:text="@string/watchlist_empty"
                 android:textColor="@color/textSecondary"
                 android:textSize="15sp"
                 android:fontFamily="@font/tektur_regular"/>

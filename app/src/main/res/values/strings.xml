@@ -9,10 +9,10 @@
     <string name="creator_intro">I am a senior computer science student at Central Washington University.\n\nMy current research includes leveraging swarm intelligence algorithms to find optimal solutions.</string>
     <string name="creator_literal">Creator</string>
     <string name="creator_name">Ethan Rocklin</string>
-    <string name="favorites_empty">No favorites yet.\nGo to Home and add your favs!</string>
+    <string name="watchlist_empty">No movies in your watchlist.\nGo to Home and add some!</string>
     <string name="get_in_touch">Questions or Concerns?\nGet In Touch!</string>
     <string name="nav_contact">Contact Us</string>
-    <string name="nav_favorites">Favorites</string>
+    <string name="nav_watchlist">Watchlist</string>
     <string name="nav_main">Home</string>
     <string name="nav_random">Random</string>
     <string name="navigation_drawer_close">Close menu</string>
@@ -20,17 +20,17 @@
     <string name="no_email_app">Oh no! No email app found!</string>
     <string name="posters">Movie Posters</string>
     <string name="randomize_button">Randomize</string>
-    <string name="remove_favorite">Remove from favorites</string>
+    <string name="remove_watchlist">Remove from Watchlist</string>
     <string name="title_contact">Contact Us</string>
-    <string name="title_favorites">Favorites</string>
+    <string name="title_watchlist">Watchlist</string>
     <string name="title_random">Random Stills</string>
 
-    <plurals name="favorites_added">
+    <plurals name="watchlist_added">
         <item quantity="one">Added %d movie to Favorite List</item>
         <item quantity="other">Added %d movies to Favorite List</item>
     </plurals>
-    <string name="favorites_already_added">Already in your Favorites!</string>
-    <plurals name="favorites_count">
+    <string name="watchlist_already_added">Already on your Watchlist!</string>
+    <plurals name="watchlist_count">
         <item quantity="one">%d movie</item>
         <item quantity="other">%d movies</item>
     </plurals>

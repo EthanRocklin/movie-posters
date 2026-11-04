@@ -109,7 +109,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/remove_favorite"
+        android:contentDescription="@string/remove_watchlist"
         android:padding="8dp"
         android:src="@drawable/ic_favorite_remove"
         android:visibility="gone"

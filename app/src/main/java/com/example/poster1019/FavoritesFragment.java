@@ -51,7 +51,7 @@ public class FavoritesFragment extends Fragment implements PosterRepository.Favo
         favoritesAdapter.setPosters(favorites);
         // Sets the text for the number of favorited movies
         int count = favorites.size();
-        textFavoritesCount.setText(getResources().getQuantityString(R.plurals.favorites_count, count, count));
+        textFavoritesCount.setText(getResources().getQuantityString(R.plurals.watchlist_count, count, count));
         // Adjusts the visibility of favorite components
         boolean isEmpty = favorites.isEmpty();
         textFavoritesCount.setVisibility(isEmpty ? View.GONE : View.VISIBLE);

@@ -48,9 +48,9 @@ public class PostersFragment extends Fragment implements posterListener {
                 OnPosterAction(false);
                 String message;
                 if(added>0){
-                    message = getResources().getQuantityString(R.plurals.favorites_added,added,added);
+                    message = getResources().getQuantityString(R.plurals.watchlist_added,added,added);
                 }else {
-                    message = getString(R.string.favorites_already_added);
+                    message = getString(R.string.watchlist_already_added);
                 }
                 Toast.makeText(requireContext(),message,Toast.LENGTH_SHORT).show();
             }
